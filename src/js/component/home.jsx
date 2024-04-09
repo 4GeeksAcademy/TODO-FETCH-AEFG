@@ -6,7 +6,7 @@ const TodoList = () => {
 
   
   const fetchTodos = () => {
-    fetch('https://playground.4geeks.com/todo')
+    fetch('https://playground.4geeks.com/todo/docs')
       .then(resp => {
         if (!resp.ok) {
           throw new Error('Failed to fetch todos');
@@ -41,7 +41,7 @@ const TodoList = () => {
 
   
   const syncTodos = updatedTodos => {
-    fetch('https://playground.4geeks.com/todo', {
+    fetch('https://playground.4geeks.com/todo/docs', {
       method: "PUT",
       body: JSON.stringify(updatedTodos),
       headers: {
